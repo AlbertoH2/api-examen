@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saludo</title>
+    <link rel="stylesheet" href="../styles/styles.css"> <!-- Ruta al archivo CSS -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const nombre = document.querySelector(".nombre"); // Selecciona el elemento con la clase "nombre"
+            const semestre = document.querySelector(".semestre"); // Selecciona el elemento con la clase "semestre"
+
+            // Agrega un evento para cuando el cursor entra al elemento con la clase "nombre"
+            nombre.addEventListener("mouseenter", function() {
+                // Agrega una clase para aplicar la animación
+                nombre.classList.add("animacion");
+            });
+
+            // Agrega un evento para cuando el cursor sale del elemento con la clase "nombre"
+            nombre.addEventListener("mouseleave", function() {
+                // Remueve la clase de la animación al salir del elemento
+                nombre.classList.remove("animacion");
+            });
+
+            // Repite el mismo proceso para el elemento con la clase "semestre"
+            semestre.addEventListener("mouseenter", function() {
+                semestre.classList.add("animacion");
+            });
+
+            semestre.addEventListener("mouseleave", function() {
+                semestre.classList.remove("animacion");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo"></div> <!-- Agrega un div vacío para el logo de la navbar -->
+        <ul class="navbar-menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Contactanos</a></li>
+            <li><a href="#">Quienes Somos</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="nombre">{{ nombre }}</h1> <!-- Añade la clase "nombre" -->
+        <p class="semestre">{{ semestre }}</p> <!-- Añade la clase "semestre" -->
+    </div>
+
+    <footer>
+        Universidad Autónoma de Chiapas
+    </footer>
+</body>
+
+</html>

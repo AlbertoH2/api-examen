@@ -1,0 +1,80 @@
+/* styles/styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Fuente */
+    min-height: 100vh; /* Altura mínima del cuerpo para ocupar toda la pantalla */
+    position: relative; /* Necesario para que el pie de página fijo funcione correctamente */
+}
+
+.navbar {
+    background-color: #ccc; /* Fondo gris para el navbar */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Alinear contenido a la derecha */
+    align-items: center;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-menu li a:hover {
+    color: red; /* Cambia el color del texto a rojo cuando se pasa el cursor sobre él */
+}
+
+.navbar-logo {
+    width: 50px;
+    height: 50px;
+    background-image: url('../images/Escudo_unach.png'); /* Ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 20px; /* Espacio a la derecha */
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px; /* Ajusta el margen superior para evitar que se superponga con el navbar */
+    margin-bottom: 100px; /* Agrega un margen inferior para dejar espacio al pie de página */
+}
+
+h1 {
+    color: #333; /* Color del texto */
+    font-size: 36px; /* Tamaño de la fuente */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+p {
+    color: #666; /* Color del texto */
+    font-size: 18px; /* Tamaño de la fuente */
+}
+
+/* Cambiar el color del texto cuando se pasa el cursor */
+h1:hover,
+p:hover {
+    color: red; /* Cambia el color del texto a rojo cuando se pasa el cursor sobre él */
+}
+
+footer {
+    background-color: black; /* Fondo negro para el pie de página */
+    color: white; /* Texto blanco en el pie de página */
+    text-align: center;
+    padding: 20px 0; /* Espaciado interno */
+    width: 100%; /* Ancho completo */
+    position: fixed; /* Pie de página fijo */
+    bottom: 0; /* Ancla el pie de página al fondo */
+}
